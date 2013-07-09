@@ -1,0 +1,10 @@
+<div id="errors">
+<% if @errors %>
+  <%= @errors %>
+<% end %>
+</div>
+<h2> Welcome To Recipe Finder </h2>
+<form method="get" action="/query">
+	<input type="text" name="recipe" placeholder="find a recipe">
+	<input type="submit" value="find">
+</form>

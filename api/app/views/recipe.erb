@@ -1,0 +1,8 @@
+<h2>Your Search Returned:</h2>
+
+<% @show_recipe.each do |recipe| %>
+<ul>
+<li><a href="/<%= recipe.id %>"><%= recipe.name %></a></li>
+</ul>
+<% end %>
+

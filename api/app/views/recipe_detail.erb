@@ -1,0 +1,12 @@
+<p><h1><%= @recipe.name %></h1>
+<% @recipe.images.each do |image| %>
+ <img src="<%= image.small_url %>">
+ <% end %></p>
+ <ul>
+ 	<h2>Ingredients</h2>
+<% @recipe.ingredients.each do |ingredients| %>
+   <li><%= ingredients %></li>
+ <% end %>
+<li><%= @recipe.name %></li>
+</ul>
+

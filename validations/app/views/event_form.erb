@@ -1,0 +1,20 @@
+<div class="errors">
+<% if @errors %>
+	<% @errors.each do |errors| %>
+	<p> <%= errors %> </p>
+  <% end %>
+<% end %>
+</div>
+
+<form method="post" action="/events/create">
+	<h2>Organizer Name</h2>
+	<input type="text" name="event[organizer_name]" placeholder="Name">
+	<h2>Organizer Email</h2>
+    <input type="text" name="event[organizer_email]" placeholder="email">
+    <h2>Event Title</h2>
+	<input type="text" name="event[title]" placholder="title">
+	<h2>When is your event?</h2>
+	<input type="date" name="event[date]">
+	<input type="submit" value="create">
+</form>		
+
