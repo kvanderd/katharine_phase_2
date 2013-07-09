@@ -7,7 +7,7 @@ var Die = function(sides) {
 }
 
 Die.prototype.roll = function() {
-  return this.value = Math.floor((Math.random()*this.sides)+1);
+  return this.dieValue = Math.floor((Math.random()*this.sides)+1);
 };
 
 // dice bag
@@ -24,7 +24,8 @@ var diceBag = new Bag;
 
 Bag.prototype.updateAll = function(diceBag) {
 	for (var i=0; i < diceBag.bag.length; i++) {
-		diceBag.bag[i].dieValue = roll();
+    console.log(diceBag.bag)
+		diceBag.bag[i].roll();
 }
   // loop through the dice bag and update each dice with new value
 }
@@ -47,6 +48,7 @@ Bag.prototype.showDice = function() {
 
  $('.roll').on('click', function(e){
  	diceBag.updateAll(diceBag);
+  diceBag.showDice();
  })
  
 
