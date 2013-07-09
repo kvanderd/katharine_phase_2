@@ -1,3 +1,5 @@
+// this one works but i am not happy with it. The other file has the WIP and is much more oo.
+
 function Dice(sides, selector) {
   this.sides    = sides;
   this.selector = selector;
